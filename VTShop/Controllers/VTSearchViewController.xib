@@ -25,10 +25,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Wl-ol-Np7" userLabel="头">
-                    <rect key="frame" x="0.0" y="20" width="375" height="65"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="75"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l6J-OR-Han" userLabel="导航">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
+                            <rect key="frame" x="0.0" y="10" width="375" height="65"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vt_back.png" translatesAutoresizingMaskIntoConstraints="NO" id="EUr-uM-jfb">
                                     <rect key="frame" x="14.5" y="23.5" width="9" height="17"/>
@@ -136,7 +136,7 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s6d-nZ-NUS" userLabel="分割线">
-                            <rect key="frame" x="0.0" y="64.5" width="375" height="0.5"/>
+                            <rect key="frame" x="0.0" y="74.5" width="375" height="0.5"/>
                             <color key="backgroundColor" red="0.92941176470588238" green="0.92941176470588238" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="0.5" id="V9U-bd-Ue8"/>
@@ -146,9 +146,9 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="s6d-nZ-NUS" secondAttribute="bottom" id="20d-GE-X0I"/>
-                        <constraint firstAttribute="height" constant="65" id="32c-Qg-9yG"/>
+                        <constraint firstAttribute="height" constant="75" id="32c-Qg-9yG"/>
                         <constraint firstItem="l6J-OR-Han" firstAttribute="width" secondItem="0Wl-ol-Np7" secondAttribute="width" id="VNd-ox-VMZ"/>
-                        <constraint firstItem="l6J-OR-Han" firstAttribute="top" secondItem="0Wl-ol-Np7" secondAttribute="top" id="ZRV-0j-cOd"/>
+                        <constraint firstItem="l6J-OR-Han" firstAttribute="top" secondItem="0Wl-ol-Np7" secondAttribute="top" constant="10" id="ZRV-0j-cOd"/>
                         <constraint firstItem="s6d-nZ-NUS" firstAttribute="centerX" secondItem="0Wl-ol-Np7" secondAttribute="centerX" id="dgs-Hl-Qzu"/>
                         <constraint firstItem="s6d-nZ-NUS" firstAttribute="width" secondItem="0Wl-ol-Np7" secondAttribute="width" id="dsC-sy-rOc"/>
                         <constraint firstItem="l6J-OR-Han" firstAttribute="bottom" secondItem="s6d-nZ-NUS" secondAttribute="top" id="gjz-GZ-X0P"/>
@@ -156,7 +156,7 @@
                     </constraints>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bmi-yB-HRD">
-                    <rect key="frame" x="0.0" y="85" width="375" height="527"/>
+                    <rect key="frame" x="0.0" y="75" width="375" height="537"/>
                     <color key="backgroundColor" red="0.92549019607843142" green="0.92549019607843142" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>
                     <color key="sectionIndexBackgroundColor" red="0.92549019607843142" green="0.92549019607843142" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>
                 </tableView>
@@ -225,7 +225,7 @@
                 <constraint firstItem="bmi-yB-HRD" firstAttribute="bottom" secondItem="dpy-7c-BPk" secondAttribute="top" id="hLp-FV-0PP"/>
                 <constraint firstItem="bmi-yB-HRD" firstAttribute="top" secondItem="0Wl-ol-Np7" secondAttribute="bottom" id="oj5-Jg-AhD"/>
                 <constraint firstItem="0Wl-ol-Np7" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="uMy-NS-Rud"/>
-                <constraint firstItem="0Wl-ol-Np7" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="vkf-zF-edy"/>
+                <constraint firstItem="0Wl-ol-Np7" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="vkf-zF-edy"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
         </view>
