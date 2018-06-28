@@ -8,12 +8,131 @@
 
 /* Begin PBXBuildFile section */
 		52300A3420E4BA8E00E8F37C /* VTShop.h in Headers */ = {isa = PBXBuildFile; fileRef = 52300A3220E4BA8E00E8F37C /* VTShop.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		52300A6F20E4BC5700E8F37C /* VTBaseViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 52300A6D20E4BC5700E8F37C /* VTBaseViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		52300A7020E4BC5700E8F37C /* VTBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52300A6E20E4BC5700E8F37C /* VTBaseViewController.m */; };
+		52300A7320E4BC7600E8F37C /* VTBaseNavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 52300A7120E4BC7600E8F37C /* VTBaseNavigationController.h */; };
+		52300A7420E4BC7600E8F37C /* VTBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52300A7220E4BC7600E8F37C /* VTBaseNavigationController.m */; };
+		52300A7720E4BC8600E8F37C /* VTSearchViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 52300A7520E4BC8600E8F37C /* VTSearchViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		52300A7820E4BC8600E8F37C /* VTSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52300A7620E4BC8600E8F37C /* VTSearchViewController.m */; };
+		52300A7D20E4BD9600E8F37C /* VTShopCardTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 52300A7B20E4BD9600E8F37C /* VTShopCardTableViewCell.h */; };
+		52300A7E20E4BD9600E8F37C /* VTShopCardTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 52300A7C20E4BD9600E8F37C /* VTShopCardTableViewCell.m */; };
+		52300A8220E4C37400E8F37C /* VTShopCountView.h in Headers */ = {isa = PBXBuildFile; fileRef = 52300A8020E4C37400E8F37C /* VTShopCountView.h */; };
+		52300A8320E4C37400E8F37C /* VTShopCountView.m in Sources */ = {isa = PBXBuildFile; fileRef = 52300A8120E4C37400E8F37C /* VTShopCountView.m */; };
+		52300A8720E4C49900E8F37C /* vt_minus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52300A8520E4C49900E8F37C /* vt_minus@2x.png */; };
+		52300A8820E4C49900E8F37C /* vt_add@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52300A8620E4C49900E8F37C /* vt_add@2x.png */; };
+		52300A8D20E4C91800E8F37C /* UIColor+VT.h in Headers */ = {isa = PBXBuildFile; fileRef = 52300A8B20E4C91800E8F37C /* UIColor+VT.h */; };
+		52300A8E20E4C91800E8F37C /* UIColor+VT.m in Sources */ = {isa = PBXBuildFile; fileRef = 52300A8C20E4C91800E8F37C /* UIColor+VT.m */; };
+		52300A9420E4CC6100E8F37C /* vt_goods@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52300A9320E4CC6100E8F37C /* vt_goods@2x.png */; };
+		52300AB020E4CCC600E8F37C /* MASCompositeConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 52300A9720E4CCC600E8F37C /* MASCompositeConstraint.h */; };
+		52300AB120E4CCC600E8F37C /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 52300A9820E4CCC600E8F37C /* MASCompositeConstraint.m */; };
+		52300AB220E4CCC600E8F37C /* MASConstraint+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 52300A9920E4CCC600E8F37C /* MASConstraint+Private.h */; };
+		52300AB320E4CCC600E8F37C /* MASConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 52300A9A20E4CCC600E8F37C /* MASConstraint.h */; };
+		52300AB420E4CCC600E8F37C /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 52300A9B20E4CCC600E8F37C /* MASConstraint.m */; };
+		52300AB520E4CCC600E8F37C /* MASConstraintMaker.h in Headers */ = {isa = PBXBuildFile; fileRef = 52300A9C20E4CCC600E8F37C /* MASConstraintMaker.h */; };
+		52300AB620E4CCC600E8F37C /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 52300A9D20E4CCC600E8F37C /* MASConstraintMaker.m */; };
+		52300AB720E4CCC600E8F37C /* MASLayoutConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 52300A9E20E4CCC600E8F37C /* MASLayoutConstraint.h */; };
+		52300AB820E4CCC600E8F37C /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 52300A9F20E4CCC600E8F37C /* MASLayoutConstraint.m */; };
+		52300AB920E4CCC600E8F37C /* Masonry.h in Headers */ = {isa = PBXBuildFile; fileRef = 52300AA020E4CCC600E8F37C /* Masonry.h */; };
+		52300ABA20E4CCC600E8F37C /* MASUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 52300AA120E4CCC600E8F37C /* MASUtilities.h */; };
+		52300ABB20E4CCC600E8F37C /* MASViewAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = 52300AA220E4CCC600E8F37C /* MASViewAttribute.h */; };
+		52300ABC20E4CCC600E8F37C /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 52300AA320E4CCC600E8F37C /* MASViewAttribute.m */; };
+		52300ABD20E4CCC600E8F37C /* MASViewConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 52300AA420E4CCC600E8F37C /* MASViewConstraint.h */; };
+		52300ABE20E4CCC600E8F37C /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 52300AA520E4CCC600E8F37C /* MASViewConstraint.m */; };
+		52300ABF20E4CCC600E8F37C /* NSArray+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 52300AA620E4CCC600E8F37C /* NSArray+MASAdditions.h */; };
+		52300AC020E4CCC600E8F37C /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 52300AA720E4CCC600E8F37C /* NSArray+MASAdditions.m */; };
+		52300AC120E4CCC600E8F37C /* NSArray+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 52300AA820E4CCC600E8F37C /* NSArray+MASShorthandAdditions.h */; };
+		52300AC220E4CCC600E8F37C /* NSLayoutConstraint+MASDebugAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 52300AA920E4CCC600E8F37C /* NSLayoutConstraint+MASDebugAdditions.h */; };
+		52300AC320E4CCC600E8F37C /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 52300AAA20E4CCC600E8F37C /* NSLayoutConstraint+MASDebugAdditions.m */; };
+		52300AC420E4CCC600E8F37C /* View+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 52300AAB20E4CCC600E8F37C /* View+MASAdditions.h */; };
+		52300AC520E4CCC600E8F37C /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 52300AAC20E4CCC600E8F37C /* View+MASAdditions.m */; };
+		52300AC620E4CCC600E8F37C /* View+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 52300AAD20E4CCC600E8F37C /* View+MASShorthandAdditions.h */; };
+		52300AC720E4CCC600E8F37C /* ViewController+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 52300AAE20E4CCC600E8F37C /* ViewController+MASAdditions.h */; };
+		52300AC820E4CCC600E8F37C /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 52300AAF20E4CCC600E8F37C /* ViewController+MASAdditions.m */; };
+		52300ACB20E4CCF100E8F37C /* UIFont+VT.h in Headers */ = {isa = PBXBuildFile; fileRef = 52300AC920E4CCF100E8F37C /* UIFont+VT.h */; };
+		52300ACC20E4CCF100E8F37C /* UIFont+VT.m in Sources */ = {isa = PBXBuildFile; fileRef = 52300ACA20E4CCF100E8F37C /* UIFont+VT.m */; };
+		52300ADF20E4F2DE00E8F37C /* VTSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52300ADE20E4F2DE00E8F37C /* VTSearchViewController.xib */; };
+		52300AE220E4F33700E8F37C /* VTSearchTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 52300AE020E4F33700E8F37C /* VTSearchTableViewController.h */; };
+		52300AE320E4F33700E8F37C /* VTSearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52300AE120E4F33700E8F37C /* VTSearchTableViewController.m */; };
+		52300AE920E5091200E8F37C /* vt_search_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52300AE420E5091100E8F37C /* vt_search_bg@2x.png */; };
+		52300AEA20E5091200E8F37C /* vt_cancel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52300AE520E5091100E8F37C /* vt_cancel@2x.png */; };
+		52300AEB20E5091200E8F37C /* vt_search@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52300AE620E5091100E8F37C /* vt_search@2x.png */; };
+		52300AEC20E5091200E8F37C /* vt_shop@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52300AE720E5091100E8F37C /* vt_shop@2x.png */; };
+		52300AED20E5091200E8F37C /* vt_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52300AE820E5091100E8F37C /* vt_back@2x.png */; };
+		52300AF220E50CF600E8F37C /* VTSearchViewViewModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 52300AF020E50CF600E8F37C /* VTSearchViewViewModel.h */; };
+		52300AF320E50CF600E8F37C /* VTSearchViewViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 52300AF120E50CF600E8F37C /* VTSearchViewViewModel.m */; };
+		52300AF820E50DF700E8F37C /* VTDataBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 52300AF620E50DF700E8F37C /* VTDataBase.h */; };
+		52300AF920E50DF700E8F37C /* VTDataBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 52300AF720E50DF700E8F37C /* VTDataBase.m */; };
+		52300AFD20E50E9800E8F37C /* VTDataShopCard.h in Headers */ = {isa = PBXBuildFile; fileRef = 52300AFB20E50E9800E8F37C /* VTDataShopCard.h */; };
+		52300AFE20E50E9800E8F37C /* VTDataShopCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 52300AFC20E50E9800E8F37C /* VTDataShopCard.m */; };
+		52300B0120E5131E00E8F37C /* shopsearch.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52300B0020E5131E00E8F37C /* shopsearch.plist */; };
+		52300B0420E5166700E8F37C /* VTDataSearchResults.h in Headers */ = {isa = PBXBuildFile; fileRef = 52300B0220E5166700E8F37C /* VTDataSearchResults.h */; };
+		52300B0520E5166700E8F37C /* VTDataSearchResults.m in Sources */ = {isa = PBXBuildFile; fileRef = 52300B0320E5166700E8F37C /* VTDataSearchResults.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		52300A2F20E4BA8E00E8F37C /* VTShop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VTShop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52300A3220E4BA8E00E8F37C /* VTShop.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VTShop.h; sourceTree = "<group>"; };
 		52300A3320E4BA8E00E8F37C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52300A6D20E4BC5700E8F37C /* VTBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VTBaseViewController.h; sourceTree = "<group>"; };
+		52300A6E20E4BC5700E8F37C /* VTBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VTBaseViewController.m; sourceTree = "<group>"; };
+		52300A7120E4BC7600E8F37C /* VTBaseNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VTBaseNavigationController.h; sourceTree = "<group>"; };
+		52300A7220E4BC7600E8F37C /* VTBaseNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VTBaseNavigationController.m; sourceTree = "<group>"; };
+		52300A7520E4BC8600E8F37C /* VTSearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VTSearchViewController.h; sourceTree = "<group>"; };
+		52300A7620E4BC8600E8F37C /* VTSearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VTSearchViewController.m; sourceTree = "<group>"; };
+		52300A7B20E4BD9600E8F37C /* VTShopCardTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VTShopCardTableViewCell.h; sourceTree = "<group>"; };
+		52300A7C20E4BD9600E8F37C /* VTShopCardTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VTShopCardTableViewCell.m; sourceTree = "<group>"; };
+		52300A8020E4C37400E8F37C /* VTShopCountView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VTShopCountView.h; sourceTree = "<group>"; };
+		52300A8120E4C37400E8F37C /* VTShopCountView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VTShopCountView.m; sourceTree = "<group>"; };
+		52300A8520E4C49900E8F37C /* vt_minus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vt_minus@2x.png"; sourceTree = "<group>"; };
+		52300A8620E4C49900E8F37C /* vt_add@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vt_add@2x.png"; sourceTree = "<group>"; };
+		52300A8B20E4C91800E8F37C /* UIColor+VT.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+VT.h"; sourceTree = "<group>"; };
+		52300A8C20E4C91800E8F37C /* UIColor+VT.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+VT.m"; sourceTree = "<group>"; };
+		52300A8F20E4C98800E8F37C /* VTShop.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VTShop.pch; sourceTree = "<group>"; };
+		52300A9320E4CC6100E8F37C /* vt_goods@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vt_goods@2x.png"; sourceTree = "<group>"; };
+		52300A9720E4CCC600E8F37C /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
+		52300A9820E4CCC600E8F37C /* MASCompositeConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASCompositeConstraint.m; sourceTree = "<group>"; };
+		52300A9920E4CCC600E8F37C /* MASConstraint+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MASConstraint+Private.h"; sourceTree = "<group>"; };
+		52300A9A20E4CCC600E8F37C /* MASConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASConstraint.h; sourceTree = "<group>"; };
+		52300A9B20E4CCC600E8F37C /* MASConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASConstraint.m; sourceTree = "<group>"; };
+		52300A9C20E4CCC600E8F37C /* MASConstraintMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASConstraintMaker.h; sourceTree = "<group>"; };
+		52300A9D20E4CCC600E8F37C /* MASConstraintMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASConstraintMaker.m; sourceTree = "<group>"; };
+		52300A9E20E4CCC600E8F37C /* MASLayoutConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASLayoutConstraint.h; sourceTree = "<group>"; };
+		52300A9F20E4CCC600E8F37C /* MASLayoutConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASLayoutConstraint.m; sourceTree = "<group>"; };
+		52300AA020E4CCC600E8F37C /* Masonry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Masonry.h; sourceTree = "<group>"; };
+		52300AA120E4CCC600E8F37C /* MASUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASUtilities.h; sourceTree = "<group>"; };
+		52300AA220E4CCC600E8F37C /* MASViewAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASViewAttribute.h; sourceTree = "<group>"; };
+		52300AA320E4CCC600E8F37C /* MASViewAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewAttribute.m; sourceTree = "<group>"; };
+		52300AA420E4CCC600E8F37C /* MASViewConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASViewConstraint.h; sourceTree = "<group>"; };
+		52300AA520E4CCC600E8F37C /* MASViewConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewConstraint.m; sourceTree = "<group>"; };
+		52300AA620E4CCC600E8F37C /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASAdditions.h"; sourceTree = "<group>"; };
+		52300AA720E4CCC600E8F37C /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+MASAdditions.m"; sourceTree = "<group>"; };
+		52300AA820E4CCC600E8F37C /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		52300AA920E4CCC600E8F37C /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
+		52300AAA20E4CCC600E8F37C /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
+		52300AAB20E4CCC600E8F37C /* View+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASAdditions.h"; sourceTree = "<group>"; };
+		52300AAC20E4CCC600E8F37C /* View+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "View+MASAdditions.m"; sourceTree = "<group>"; };
+		52300AAD20E4CCC600E8F37C /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		52300AAE20E4CCC600E8F37C /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+MASAdditions.h"; sourceTree = "<group>"; };
+		52300AAF20E4CCC600E8F37C /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+MASAdditions.m"; sourceTree = "<group>"; };
+		52300AC920E4CCF100E8F37C /* UIFont+VT.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIFont+VT.h"; sourceTree = "<group>"; };
+		52300ACA20E4CCF100E8F37C /* UIFont+VT.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIFont+VT.m"; sourceTree = "<group>"; };
+		52300ADE20E4F2DE00E8F37C /* VTSearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VTSearchViewController.xib; sourceTree = "<group>"; };
+		52300AE020E4F33700E8F37C /* VTSearchTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VTSearchTableViewController.h; sourceTree = "<group>"; };
+		52300AE120E4F33700E8F37C /* VTSearchTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VTSearchTableViewController.m; sourceTree = "<group>"; };
+		52300AE420E5091100E8F37C /* vt_search_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vt_search_bg@2x.png"; sourceTree = "<group>"; };
+		52300AE520E5091100E8F37C /* vt_cancel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vt_cancel@2x.png"; sourceTree = "<group>"; };
+		52300AE620E5091100E8F37C /* vt_search@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vt_search@2x.png"; sourceTree = "<group>"; };
+		52300AE720E5091100E8F37C /* vt_shop@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vt_shop@2x.png"; sourceTree = "<group>"; };
+		52300AE820E5091100E8F37C /* vt_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vt_back@2x.png"; sourceTree = "<group>"; };
+		52300AF020E50CF600E8F37C /* VTSearchViewViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VTSearchViewViewModel.h; sourceTree = "<group>"; };
+		52300AF120E50CF600E8F37C /* VTSearchViewViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VTSearchViewViewModel.m; sourceTree = "<group>"; };
+		52300AF620E50DF700E8F37C /* VTDataBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VTDataBase.h; sourceTree = "<group>"; };
+		52300AF720E50DF700E8F37C /* VTDataBase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VTDataBase.m; sourceTree = "<group>"; };
+		52300AFB20E50E9800E8F37C /* VTDataShopCard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VTDataShopCard.h; sourceTree = "<group>"; };
+		52300AFC20E50E9800E8F37C /* VTDataShopCard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VTDataShopCard.m; sourceTree = "<group>"; };
+		52300B0020E5131E00E8F37C /* shopsearch.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = shopsearch.plist; sourceTree = "<group>"; };
+		52300B0220E5166700E8F37C /* VTDataSearchResults.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VTDataSearchResults.h; sourceTree = "<group>"; };
+		52300B0320E5166700E8F37C /* VTDataSearchResults.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VTDataSearchResults.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,10 +165,206 @@
 		52300A3120E4BA8E00E8F37C /* VTShop */ = {
 			isa = PBXGroup;
 			children = (
+				52300AFF20E5130500E8F37C /* 模拟数据 */,
+				52300AF420E50DE400E8F37C /* Model */,
+				52300A8920E4C8F900E8F37C /* Commons */,
+				52300A8420E4C45000E8F37C /* Resource */,
+				52300A6920E4BBE700E8F37C /* View */,
+				52300A6820E4BBD100E8F37C /* ViewModel */,
+				52300A6720E4BB6B00E8F37C /* Controllers */,
 				52300A3220E4BA8E00E8F37C /* VTShop.h */,
 				52300A3320E4BA8E00E8F37C /* Info.plist */,
 			);
 			path = VTShop;
+			sourceTree = "<group>";
+		};
+		52300A6720E4BB6B00E8F37C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				52300A6C20E4BC4900E8F37C /* Base */,
+				52300A6A20E4BC0800E8F37C /* 搜索页 */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		52300A6820E4BBD100E8F37C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				52300AEF20E50CE000E8F37C /* 搜索页 */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		52300A6920E4BBE700E8F37C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				52300A7F20E4C33D00E8F37C /* TextField */,
+				52300A7A20E4BD8300E8F37C /* Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		52300A6A20E4BC0800E8F37C /* 搜索页 */ = {
+			isa = PBXGroup;
+			children = (
+				52300A7520E4BC8600E8F37C /* VTSearchViewController.h */,
+				52300A7620E4BC8600E8F37C /* VTSearchViewController.m */,
+				52300ADE20E4F2DE00E8F37C /* VTSearchViewController.xib */,
+				52300AE020E4F33700E8F37C /* VTSearchTableViewController.h */,
+				52300AE120E4F33700E8F37C /* VTSearchTableViewController.m */,
+				52300B0220E5166700E8F37C /* VTDataSearchResults.h */,
+				52300B0320E5166700E8F37C /* VTDataSearchResults.m */,
+			);
+			name = "搜索页";
+			sourceTree = "<group>";
+		};
+		52300A6C20E4BC4900E8F37C /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				52300A6D20E4BC5700E8F37C /* VTBaseViewController.h */,
+				52300A6E20E4BC5700E8F37C /* VTBaseViewController.m */,
+				52300A7120E4BC7600E8F37C /* VTBaseNavigationController.h */,
+				52300A7220E4BC7600E8F37C /* VTBaseNavigationController.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		52300A7A20E4BD8300E8F37C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				52300A7B20E4BD9600E8F37C /* VTShopCardTableViewCell.h */,
+				52300A7C20E4BD9600E8F37C /* VTShopCardTableViewCell.m */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		52300A7F20E4C33D00E8F37C /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				52300A8020E4C37400E8F37C /* VTShopCountView.h */,
+				52300A8120E4C37400E8F37C /* VTShopCountView.m */,
+			);
+			path = TextField;
+			sourceTree = "<group>";
+		};
+		52300A8420E4C45000E8F37C /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				52300AE820E5091100E8F37C /* vt_back@2x.png */,
+				52300AE520E5091100E8F37C /* vt_cancel@2x.png */,
+				52300AE420E5091100E8F37C /* vt_search_bg@2x.png */,
+				52300AE620E5091100E8F37C /* vt_search@2x.png */,
+				52300AE720E5091100E8F37C /* vt_shop@2x.png */,
+				52300A9320E4CC6100E8F37C /* vt_goods@2x.png */,
+				52300A8620E4C49900E8F37C /* vt_add@2x.png */,
+				52300A8520E4C49900E8F37C /* vt_minus@2x.png */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		52300A8920E4C8F900E8F37C /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				52300A9520E4CCBE00E8F37C /* Thirds */,
+				52300A8A20E4C8FF00E8F37C /* Catagory */,
+				52300A8F20E4C98800E8F37C /* VTShop.pch */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
+		52300A8A20E4C8FF00E8F37C /* Catagory */ = {
+			isa = PBXGroup;
+			children = (
+				52300A8B20E4C91800E8F37C /* UIColor+VT.h */,
+				52300A8C20E4C91800E8F37C /* UIColor+VT.m */,
+				52300AC920E4CCF100E8F37C /* UIFont+VT.h */,
+				52300ACA20E4CCF100E8F37C /* UIFont+VT.m */,
+			);
+			path = Catagory;
+			sourceTree = "<group>";
+		};
+		52300A9520E4CCBE00E8F37C /* Thirds */ = {
+			isa = PBXGroup;
+			children = (
+				52300A9620E4CCC600E8F37C /* Masonry */,
+			);
+			path = Thirds;
+			sourceTree = "<group>";
+		};
+		52300A9620E4CCC600E8F37C /* Masonry */ = {
+			isa = PBXGroup;
+			children = (
+				52300A9720E4CCC600E8F37C /* MASCompositeConstraint.h */,
+				52300A9820E4CCC600E8F37C /* MASCompositeConstraint.m */,
+				52300A9920E4CCC600E8F37C /* MASConstraint+Private.h */,
+				52300A9A20E4CCC600E8F37C /* MASConstraint.h */,
+				52300A9B20E4CCC600E8F37C /* MASConstraint.m */,
+				52300A9C20E4CCC600E8F37C /* MASConstraintMaker.h */,
+				52300A9D20E4CCC600E8F37C /* MASConstraintMaker.m */,
+				52300A9E20E4CCC600E8F37C /* MASLayoutConstraint.h */,
+				52300A9F20E4CCC600E8F37C /* MASLayoutConstraint.m */,
+				52300AA020E4CCC600E8F37C /* Masonry.h */,
+				52300AA120E4CCC600E8F37C /* MASUtilities.h */,
+				52300AA220E4CCC600E8F37C /* MASViewAttribute.h */,
+				52300AA320E4CCC600E8F37C /* MASViewAttribute.m */,
+				52300AA420E4CCC600E8F37C /* MASViewConstraint.h */,
+				52300AA520E4CCC600E8F37C /* MASViewConstraint.m */,
+				52300AA620E4CCC600E8F37C /* NSArray+MASAdditions.h */,
+				52300AA720E4CCC600E8F37C /* NSArray+MASAdditions.m */,
+				52300AA820E4CCC600E8F37C /* NSArray+MASShorthandAdditions.h */,
+				52300AA920E4CCC600E8F37C /* NSLayoutConstraint+MASDebugAdditions.h */,
+				52300AAA20E4CCC600E8F37C /* NSLayoutConstraint+MASDebugAdditions.m */,
+				52300AAB20E4CCC600E8F37C /* View+MASAdditions.h */,
+				52300AAC20E4CCC600E8F37C /* View+MASAdditions.m */,
+				52300AAD20E4CCC600E8F37C /* View+MASShorthandAdditions.h */,
+				52300AAE20E4CCC600E8F37C /* ViewController+MASAdditions.h */,
+				52300AAF20E4CCC600E8F37C /* ViewController+MASAdditions.m */,
+			);
+			path = Masonry;
+			sourceTree = "<group>";
+		};
+		52300AEF20E50CE000E8F37C /* 搜索页 */ = {
+			isa = PBXGroup;
+			children = (
+				52300AF020E50CF600E8F37C /* VTSearchViewViewModel.h */,
+				52300AF120E50CF600E8F37C /* VTSearchViewViewModel.m */,
+			);
+			name = "搜索页";
+			sourceTree = "<group>";
+		};
+		52300AF420E50DE400E8F37C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				52300AFA20E50E7000E8F37C /* 搜索页 */,
+				52300AF520E50DEF00E8F37C /* Base */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		52300AF520E50DEF00E8F37C /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				52300AF620E50DF700E8F37C /* VTDataBase.h */,
+				52300AF720E50DF700E8F37C /* VTDataBase.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		52300AFA20E50E7000E8F37C /* 搜索页 */ = {
+			isa = PBXGroup;
+			children = (
+				52300AFB20E50E9800E8F37C /* VTDataShopCard.h */,
+				52300AFC20E50E9800E8F37C /* VTDataShopCard.m */,
+			);
+			name = "搜索页";
+			sourceTree = "<group>";
+		};
+		52300AFF20E5130500E8F37C /* 模拟数据 */ = {
+			isa = PBXGroup;
+			children = (
+				52300B0020E5131E00E8F37C /* shopsearch.plist */,
+			);
+			path = "模拟数据";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -59,7 +374,34 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52300AB220E4CCC600E8F37C /* MASConstraint+Private.h in Headers */,
+				52300AC620E4CCC600E8F37C /* View+MASShorthandAdditions.h in Headers */,
+				52300A6F20E4BC5700E8F37C /* VTBaseViewController.h in Headers */,
+				52300AC720E4CCC600E8F37C /* ViewController+MASAdditions.h in Headers */,
+				52300AFD20E50E9800E8F37C /* VTDataShopCard.h in Headers */,
+				52300A8220E4C37400E8F37C /* VTShopCountView.h in Headers */,
+				52300AC420E4CCC600E8F37C /* View+MASAdditions.h in Headers */,
+				52300AB920E4CCC600E8F37C /* Masonry.h in Headers */,
+				52300A7720E4BC8600E8F37C /* VTSearchViewController.h in Headers */,
 				52300A3420E4BA8E00E8F37C /* VTShop.h in Headers */,
+				52300AC220E4CCC600E8F37C /* NSLayoutConstraint+MASDebugAdditions.h in Headers */,
+				52300AE220E4F33700E8F37C /* VTSearchTableViewController.h in Headers */,
+				52300ACB20E4CCF100E8F37C /* UIFont+VT.h in Headers */,
+				52300A8D20E4C91800E8F37C /* UIColor+VT.h in Headers */,
+				52300AC120E4CCC600E8F37C /* NSArray+MASShorthandAdditions.h in Headers */,
+				52300A7D20E4BD9600E8F37C /* VTShopCardTableViewCell.h in Headers */,
+				52300AB720E4CCC600E8F37C /* MASLayoutConstraint.h in Headers */,
+				52300A7320E4BC7600E8F37C /* VTBaseNavigationController.h in Headers */,
+				52300ABF20E4CCC600E8F37C /* NSArray+MASAdditions.h in Headers */,
+				52300ABD20E4CCC600E8F37C /* MASViewConstraint.h in Headers */,
+				52300ABB20E4CCC600E8F37C /* MASViewAttribute.h in Headers */,
+				52300AB020E4CCC600E8F37C /* MASCompositeConstraint.h in Headers */,
+				52300AF820E50DF700E8F37C /* VTDataBase.h in Headers */,
+				52300B0420E5166700E8F37C /* VTDataSearchResults.h in Headers */,
+				52300AF220E50CF600E8F37C /* VTSearchViewViewModel.h in Headers */,
+				52300ABA20E4CCC600E8F37C /* MASUtilities.h in Headers */,
+				52300AB320E4CCC600E8F37C /* MASConstraint.h in Headers */,
+				52300AB520E4CCC600E8F37C /* MASConstraintMaker.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,6 +462,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52300B0120E5131E00E8F37C /* shopsearch.plist in Resources */,
+				52300AED20E5091200E8F37C /* vt_back@2x.png in Resources */,
+				52300A8820E4C49900E8F37C /* vt_add@2x.png in Resources */,
+				52300A9420E4CC6100E8F37C /* vt_goods@2x.png in Resources */,
+				52300AEA20E5091200E8F37C /* vt_cancel@2x.png in Resources */,
+				52300ADF20E4F2DE00E8F37C /* VTSearchViewController.xib in Resources */,
+				52300AEB20E5091200E8F37C /* vt_search@2x.png in Resources */,
+				52300A8720E4C49900E8F37C /* vt_minus@2x.png in Resources */,
+				52300AEC20E5091200E8F37C /* vt_shop@2x.png in Resources */,
+				52300AE920E5091200E8F37C /* vt_search_bg@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,6 +482,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52300AB420E4CCC600E8F37C /* MASConstraint.m in Sources */,
+				52300ACC20E4CCF100E8F37C /* UIFont+VT.m in Sources */,
+				52300ABC20E4CCC600E8F37C /* MASViewAttribute.m in Sources */,
+				52300AC820E4CCC600E8F37C /* ViewController+MASAdditions.m in Sources */,
+				52300AC020E4CCC600E8F37C /* NSArray+MASAdditions.m in Sources */,
+				52300A7820E4BC8600E8F37C /* VTSearchViewController.m in Sources */,
+				52300AF920E50DF700E8F37C /* VTDataBase.m in Sources */,
+				52300ABE20E4CCC600E8F37C /* MASViewConstraint.m in Sources */,
+				52300AE320E4F33700E8F37C /* VTSearchTableViewController.m in Sources */,
+				52300AB820E4CCC600E8F37C /* MASLayoutConstraint.m in Sources */,
+				52300A7E20E4BD9600E8F37C /* VTShopCardTableViewCell.m in Sources */,
+				52300A7420E4BC7600E8F37C /* VTBaseNavigationController.m in Sources */,
+				52300AC520E4CCC600E8F37C /* View+MASAdditions.m in Sources */,
+				52300AB120E4CCC600E8F37C /* MASCompositeConstraint.m in Sources */,
+				52300AC320E4CCC600E8F37C /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				52300AB620E4CCC600E8F37C /* MASConstraintMaker.m in Sources */,
+				52300B0520E5166700E8F37C /* VTDataSearchResults.m in Sources */,
+				52300A8320E4C37400E8F37C /* VTShopCountView.m in Sources */,
+				52300AFE20E50E9800E8F37C /* VTDataShopCard.m in Sources */,
+				52300AF320E50CF600E8F37C /* VTSearchViewViewModel.m in Sources */,
+				52300A7020E4BC5700E8F37C /* VTBaseViewController.m in Sources */,
+				52300A8E20E4C91800E8F37C /* UIColor+VT.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +635,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/VTShop/Commons/VTShop.pch";
 				INFOPLIST_FILE = VTShop/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -269,6 +644,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vtears.VTShop;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -285,6 +661,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/VTShop/Commons/VTShop.pch";
 				INFOPLIST_FILE = VTShop/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -293,6 +670,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vtears.VTShop;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
