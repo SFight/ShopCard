@@ -199,12 +199,12 @@ extern NSString *const kAddName;
 {
     [super layoutSubviews];
     
-    for (UIView *aView in [self.contentView subviews]) {
-        [aView removeFromSuperview];
-    }
-    
-    [self setupSubviews];
-    [self constraintsSubviews];
+//    for (UIView *aView in [self.contentView subviews]) {
+//        [aView removeFromSuperview];
+//    }
+//    
+//    [self setupSubviews];
+//    [self constraintsSubviews];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -229,7 +229,10 @@ extern NSString *const kAddName;
 #pragma mark - 更新数据
 - (void)updateView
 {
-    [self.goodsImageView setImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:self.dataShopCard.imagePath]] scale:1.0f]];
+    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+        [self.goodsImageView setImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:self.dataShopCard.imagePath]] scale:1.0f]];
+    }];
+//    [self.goodsImageView setImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:self.dataShopCard.imagePath]] scale:1.0f]];
     self.goodsTitleLabel.text = self.dataShopCard.title;
     self.goodsPriceLabel.text = self.dataShopCard.priceDiscription;
     if ([self.dataShopCard.buyCount integerValue] > 0) {
