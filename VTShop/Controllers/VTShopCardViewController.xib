@@ -27,11 +27,11 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9SG-Wu-vU7" userLabel="背景">
-                    <rect key="frame" x="-0.5" y="10" width="375" height="667"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XPD-iN-ZCo" userLabel="内容">
-                    <rect key="frame" x="-0.5" y="167" width="375" height="500"/>
+                    <rect key="frame" x="0.0" y="167" width="375" height="500"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mNG-2e-iaY" userLabel="头">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="106"/>
@@ -229,15 +229,15 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="XPD-iN-ZCo" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="3/4" id="3ib-Ys-xpz"/>
-                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="XPD-iN-ZCo" secondAttribute="bottom" id="Bj1-Jl-Kv0"/>
+                <constraint firstAttribute="bottom" secondItem="XPD-iN-ZCo" secondAttribute="bottom" id="Bj1-Jl-Kv0"/>
                 <constraint firstItem="9SG-Wu-vU7" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="QFN-dk-gGh"/>
-                <constraint firstItem="9SG-Wu-vU7" firstAttribute="centerY" secondItem="Q5M-cg-NOt" secondAttribute="centerY" id="hnF-PW-42p"/>
-                <constraint firstItem="XPD-iN-ZCo" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="kSp-zW-mke"/>
+                <constraint firstItem="9SG-Wu-vU7" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="hnF-PW-42p"/>
+                <constraint firstItem="XPD-iN-ZCo" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="kSp-zW-mke"/>
                 <constraint firstItem="XPD-iN-ZCo" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="kpO-aZ-Rhm"/>
                 <constraint firstItem="9SG-Wu-vU7" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" id="q7B-hH-zm8"/>
-                <constraint firstItem="9SG-Wu-vU7" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="tx2-Ij-bnk"/>
+                <constraint firstItem="9SG-Wu-vU7" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="tx2-Ij-bnk"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <viewLayoutGuide key="safeArea" id="ZwU-gG-kGV"/>
         </view>
     </objects>
     <resources>
