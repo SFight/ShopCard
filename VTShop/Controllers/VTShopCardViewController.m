@@ -1,32 +1,33 @@
 //
-//  VTSearchViewController.m
+//  VTShopCardViewController.m
 //  VTShop
 //
 //  Created by vtears on 2018/6/28.
 //  Copyright © 2018年 vtears.com. All rights reserved.
 //
 
-#import "VTSearchViewController.h"
-
-#import "VTSearchTableViewController.h"
-
-#import "VTSearchViewViewModel.h"
-#import "VTDataSearchResults.h"
-
 #import "VTShopCardViewController.h"
 
-@interface VTSearchViewController ()<UITextFieldDelegate>
+#import "VTSearchTableViewController.h"
+#import "VTSearchViewViewModel.h"
+
+#import "VTDataSearchResults.h"
+
+@interface VTShopCardViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (weak, nonatomic) IBOutlet UIView *cancelSearch;
-@property (weak, nonatomic) IBOutlet UITextField *searchTextField;
-@property (weak, nonatomic) IBOutlet UILabel *priceLabel;
+@property (weak, nonatomic) IBOutlet UILabel *yxLabel; // 已选x件 标志
+@property (weak, nonatomic) IBOutlet UILabel *priceLabel; // 价格
+
+@property (weak, nonatomic) IBOutlet UIImageView *checkAllImageView;
+@property (weak, nonatomic) IBOutlet UIButton *checkAllButton;
 
 @property (nonatomic, strong) VTSearchTableViewController *tableViewControl;
 @property (nonatomic, strong) VTSearchViewViewModel *searchViewViewModel;
 
+
 @end
 
-@implementation VTSearchViewController
+@implementation VTShopCardViewController
 
 #pragma mark - lazyInit
 - (VTSearchTableViewController *)tableViewControl
@@ -50,13 +51,20 @@
 #pragma mark - 生命周期
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    
+    // Do any additional setup after loading the view from its nib.
     self.tableView.delegate = self.tableViewControl;
     self.tableView.dataSource = self.tableViewControl;
-    [self.searchTextField addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
-
+    
     [self.searchViewViewModel addObserver:self forKeyPath:@"dataSearchResults" options:NSKeyValueObservingOptionNew context:nil];
+    
+    // 开始查询
+    __weak typeof(self) weakSelf = self;
+    [self.searchViewViewModel queryGoodsWithName:@"" completion:^(VTDataSearchResults *dataSearchResults) {
+        [weakSelf.tableViewControl setDataModel:dataSearchResults];
+        [weakSelf.tableView reloadData];
+        weakSelf.priceLabel.text = dataSearchResults.totalBuyPriceDiscription;
+        
+    }];
 }
 
 - (void)dealloc
@@ -80,48 +88,26 @@
 }
 
 #pragma mark - IBAction
-- (IBAction)onClickBackButton:(UIButton *)button
+- (IBAction)onClickShopButton:(UIButton *)button
 {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (IBAction)onClickCancelSearchButton:(UIButton *)button
+- (IBAction)onClickCheckAllButton:(UIButton *)button
 {
-    [self.searchTextField resignFirstResponder];
-    self.cancelSearch.hidden = YES;
+    button.selected = !button.selected;
+    self.checkAllImageView.highlighted = button.selected;
 }
 
-- (IBAction)onClickShopButton:(UIButton *)button
+- (IBAction)onClickClearAllButton:(UIButton *)button
 {
-    self.modalPresentationStyle = UIModalPresentationOverCurrentContext;//关键语句，必须有
-    VTShopCardViewController *shopCardVC = [[VTShopCardViewController alloc] initWithNibName:NSStringFromClass([VTShopCardViewController class]) bundle:[NSBundle bundleForClass:[self class]]];
-    shopCardVC.modalPresentationStyle = UIModalPresentationOverCurrentContext;
-    
-    [self presentViewController:shopCardVC animated:YES completion:nil];
+    self.checkAllButton.selected = NO;
+    self.checkAllImageView.highlighted = NO;
 }
 
 - (IBAction)onClickPayButton:(UIButton *)button
 {
     
-}
-
-#pragma mark - SEL
-- (void)textFieldDidChange:(UITextField *)textField
-{
-    // 开始查询
-    __weak typeof(self) weakSelf = self;
-    [self.searchViewViewModel queryGoodsWithName:textField.text completion:^(VTDataSearchResults *dataSearchResults) {
-        [weakSelf.tableViewControl setDataModel:dataSearchResults];
-        [weakSelf.tableView reloadData];
-        weakSelf.priceLabel.text = dataSearchResults.totalBuyPriceDiscription;
-        
-    }];
-}
-
-#pragma mark - UITextFieldDelegate
-- (void)textFieldDidBeginEditing:(UITextField *)textField
-{
-    self.cancelSearch.hidden = NO;
 }
 
 @end
