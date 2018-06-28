@@ -12,7 +12,7 @@
 
 @interface VTDataSearchResults : NSObject
 
-@property (nonatomic, copy) NSMutableArray<VTDataShopCard *> *dataArray;
+@property (nonatomic, strong) NSMutableArray<VTDataShopCard *> *dataArray;
 @property (nonatomic, copy, readonly) NSString *totalBuyPriceDiscription;
 @property (nonatomic, copy, readonly) NSNumber *totalBuyPrice;
 
