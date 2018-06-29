@@ -8,10 +8,11 @@
 
 #import "VTShopCardViewController.h"
 
-#import "VTSearchTableViewController.h"
+#import "VTShopCardTableViewControl.h"
 #import "VTSearchViewViewModel.h"
 
 #import "VTDataSearchResults.h"
+#import "VTDataShopCard.h"
 
 @interface VTShopCardViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -21,7 +22,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *checkAllImageView;
 @property (weak, nonatomic) IBOutlet UIButton *checkAllButton;
 
-@property (nonatomic, strong) VTSearchTableViewController *tableViewControl;
+@property (nonatomic, strong) VTShopCardTableViewControl *tableViewControl;
 @property (nonatomic, strong) VTSearchViewViewModel *searchViewViewModel;
 
 
@@ -30,10 +31,10 @@
 @implementation VTShopCardViewController
 
 #pragma mark - lazyInit
-- (VTSearchTableViewController *)tableViewControl
+- (VTShopCardTableViewControl *)tableViewControl
 {
     if (!_tableViewControl) {
-        _tableViewControl = [[VTSearchTableViewController alloc] initWithTableView:self.tableView viewModel:self.searchViewViewModel];
+        _tableViewControl = [[VTShopCardTableViewControl alloc] initWithTableView:self.tableView viewModel:self.searchViewViewModel];
     }
     
     return _tableViewControl;
@@ -60,9 +61,10 @@
     // 开始查询
     __weak typeof(self) weakSelf = self;
     [self.searchViewViewModel queryGoodsWithName:@"" completion:^(VTDataSearchResults *dataSearchResults) {
-        [weakSelf.tableViewControl setDataModel:dataSearchResults];
-        [weakSelf.tableView reloadData];
-        weakSelf.priceLabel.text = dataSearchResults.totalBuyPriceDiscription;
+        weakSelf.searchViewViewModel.dataSearchResults = dataSearchResults;
+//        [weakSelf.tableViewControl setDataModel:dataSearchResults];
+//        [weakSelf.tableView reloadData];
+//        weakSelf.priceLabel.text = dataSearchResults.totalBuyPriceDiscription;
         
     }];
 }
@@ -97,12 +99,28 @@
 {
     button.selected = !button.selected;
     self.checkAllImageView.highlighted = button.selected;
+    
+    for (VTDataShopCard *dataShopCard in self.searchViewViewModel.dataSearchResults.dataArray) {
+        dataShopCard.state = dataShopCard.state == ShopCardStateDisabled ? ShopCardStateDisabled : button.selected ? ShopCardStateSelection : ShopCardStateDefault;
+    }
+    
+    VTDataSearchResults *dataSearchResults = [[VTDataSearchResults alloc] initWithShopCards:self.searchViewViewModel.dataSearchResults.dataArray];
+    [dataSearchResults reload];
+    self.searchViewViewModel.dataSearchResults = dataSearchResults;
+    
 }
 
 - (IBAction)onClickClearAllButton:(UIButton *)button
 {
     self.checkAllButton.selected = NO;
     self.checkAllImageView.highlighted = NO;
+    
+    [self.searchViewViewModel.dataSearchResults.dataArray removeAllObjects];
+    self.searchViewViewModel.dataSearchResults = nil;
+    
+    VTDataSearchResults *dataSearchResults = [[VTDataSearchResults alloc] initWithShopCards:self.searchViewViewModel.dataSearchResults.dataArray];
+    [dataSearchResults reload];
+    self.searchViewViewModel.dataSearchResults = dataSearchResults;
 }
 
 - (IBAction)onClickPayButton:(UIButton *)button

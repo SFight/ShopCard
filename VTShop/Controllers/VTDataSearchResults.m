@@ -19,7 +19,10 @@
         _dataArray = [NSMutableArray arrayWithArray:dataArray];
         double price = 0.0f;
         for (VTDataShopCard *dataShopCard in dataArray) {
-            price += [dataShopCard.price doubleValue] * [dataShopCard.buyCount integerValue];
+            if (dataShopCard.state == ShopCardStateSelection) {
+                price += [dataShopCard.price doubleValue] * [dataShopCard.buyCount integerValue];
+            }
+//            price += [dataShopCard.price doubleValue] * [dataShopCard.buyCount integerValue];
         }
         
         _totalBuyPrice = [NSNumber numberWithDouble:price];
@@ -33,7 +36,9 @@
 {
     double price = 0.0f;
     for (VTDataShopCard *dataShopCard in self.dataArray) {
-        price += [dataShopCard.price doubleValue] * [dataShopCard.buyCount integerValue];
+        if (dataShopCard.state == ShopCardStateSelection) {
+            price += [dataShopCard.price doubleValue] * [dataShopCard.buyCount integerValue];
+        }
     }
     
     _totalBuyPrice = [NSNumber numberWithDouble:price];

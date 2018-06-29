@@ -67,6 +67,8 @@
 		52300B0120E5131E00E8F37C /* shopsearch.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52300B0020E5131E00E8F37C /* shopsearch.plist */; };
 		52300B0420E5166700E8F37C /* VTDataSearchResults.h in Headers */ = {isa = PBXBuildFile; fileRef = 52300B0220E5166700E8F37C /* VTDataSearchResults.h */; };
 		52300B0520E5166700E8F37C /* VTDataSearchResults.m in Sources */ = {isa = PBXBuildFile; fileRef = 52300B0320E5166700E8F37C /* VTDataSearchResults.m */; };
+		52D2DFCE20E6038D00FA5ACF /* VTShopCardTableViewControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 52D2DFCC20E6038D00FA5ACF /* VTShopCardTableViewControl.h */; };
+		52D2DFCF20E6038D00FA5ACF /* VTShopCardTableViewControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D2DFCD20E6038D00FA5ACF /* VTShopCardTableViewControl.m */; };
 		52E2F47E20E53D570061DDC3 /* VTShopCardViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 52E2F47B20E53D570061DDC3 /* VTShopCardViewController.h */; };
 		52E2F47F20E53D570061DDC3 /* VTShopCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52E2F47C20E53D570061DDC3 /* VTShopCardViewController.m */; };
 		52E2F48020E53D570061DDC3 /* VTShopCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52E2F47D20E53D570061DDC3 /* VTShopCardViewController.xib */; };
@@ -141,6 +143,8 @@
 		52300B0020E5131E00E8F37C /* shopsearch.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = shopsearch.plist; sourceTree = "<group>"; };
 		52300B0220E5166700E8F37C /* VTDataSearchResults.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VTDataSearchResults.h; sourceTree = "<group>"; };
 		52300B0320E5166700E8F37C /* VTDataSearchResults.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VTDataSearchResults.m; sourceTree = "<group>"; };
+		52D2DFCC20E6038D00FA5ACF /* VTShopCardTableViewControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VTShopCardTableViewControl.h; sourceTree = "<group>"; };
+		52D2DFCD20E6038D00FA5ACF /* VTShopCardTableViewControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VTShopCardTableViewControl.m; sourceTree = "<group>"; };
 		52E2F47B20E53D570061DDC3 /* VTShopCardViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VTShopCardViewController.h; sourceTree = "<group>"; };
 		52E2F47C20E53D570061DDC3 /* VTShopCardViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VTShopCardViewController.m; sourceTree = "<group>"; };
 		52E2F47D20E53D570061DDC3 /* VTShopCardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VTShopCardViewController.xib; sourceTree = "<group>"; };
@@ -395,6 +399,8 @@
 				52E2F47B20E53D570061DDC3 /* VTShopCardViewController.h */,
 				52E2F47C20E53D570061DDC3 /* VTShopCardViewController.m */,
 				52E2F47D20E53D570061DDC3 /* VTShopCardViewController.xib */,
+				52D2DFCC20E6038D00FA5ACF /* VTShopCardTableViewControl.h */,
+				52D2DFCD20E6038D00FA5ACF /* VTShopCardTableViewControl.m */,
 			);
 			name = "购物车";
 			sourceTree = "<group>";
@@ -412,6 +418,7 @@
 				52300AC720E4CCC600E8F37C /* ViewController+MASAdditions.h in Headers */,
 				52300AFD20E50E9800E8F37C /* VTDataShopCard.h in Headers */,
 				52300A8220E4C37400E8F37C /* VTShopCountView.h in Headers */,
+				52D2DFCE20E6038D00FA5ACF /* VTShopCardTableViewControl.h in Headers */,
 				52300AC420E4CCC600E8F37C /* View+MASAdditions.h in Headers */,
 				52300AB920E4CCC600E8F37C /* Masonry.h in Headers */,
 				52E2F47E20E53D570061DDC3 /* VTShopCardViewController.h in Headers */,
@@ -522,6 +529,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52300AB420E4CCC600E8F37C /* MASConstraint.m in Sources */,
+				52D2DFCF20E6038D00FA5ACF /* VTShopCardTableViewControl.m in Sources */,
 				52300ACC20E4CCF100E8F37C /* UIFont+VT.m in Sources */,
 				52300ABC20E4CCC600E8F37C /* MASViewAttribute.m in Sources */,
 				52300AC820E4CCC600E8F37C /* ViewController+MASAdditions.m in Sources */,

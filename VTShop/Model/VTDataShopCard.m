@@ -13,6 +13,8 @@ NSString *const kShopCardTitle = @"title";
 NSString *const kShopCardPriceDiscription = @"price_discription";
 NSString *const kShopCardPrice = @"price";
 NSString *const kShopCardBuyCount = @"buy_count";
+NSString *const kShopCardState = @"state";
+NSString *const kShopCardDiscription = @"discription";
 
 @implementation VTDataShopCard
 
@@ -25,6 +27,8 @@ NSString *const kShopCardBuyCount = @"buy_count";
         _priceDiscription = [self stringValue:self.responseDic[kShopCardPriceDiscription]];
         _price = [self numberValue:self.responseDic[kShopCardPrice]];
         _buyCount = [self numberValue:self.responseDic[kShopCardBuyCount]];
+        _state = [[self numberValue:self.responseDic[kShopCardState]] integerValue];
+        _discription = [self stringValue:self.responseDic[kShopCardDiscription]];
     }
     
     return self;

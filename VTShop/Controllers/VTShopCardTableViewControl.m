@@ -1,21 +1,22 @@
 //
-//  VTSearchTableViewController.m
+//  VTShopCardTableViewControl.m
 //  VTShop
 //
-//  Created by vtears on 2018/6/28.
+//  Created by vtears on 2018/6/29.
 //  Copyright © 2018年 vtears.com. All rights reserved.
 //
 
-#import "VTSearchTableViewController.h"
+#import "VTShopCardTableViewControl.h"
+
 #import "VTShopCardTableViewCell.h"
 
 #import "VTDataShopCard.h"
 #import "VTDataSearchResults.h"
 #import "VTSearchViewViewModel.h"
 
-NSString *const kShopCardTableViewCell = @"Cell";
+extern NSString *const kShopCardTableViewCell;
 
-@interface VTSearchTableViewController()
+@interface VTShopCardTableViewControl()
 
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) VTSearchViewViewModel *searchViewViewModel;
@@ -23,7 +24,7 @@ NSString *const kShopCardTableViewCell = @"Cell";
 
 @end
 
-@implementation VTSearchTableViewController
+@implementation VTShopCardTableViewControl
 
 - (instancetype)initWithTableView:(UITableView *)tableView viewModel:(VTSearchViewViewModel *)searchViewViewModel
 {
@@ -31,7 +32,7 @@ NSString *const kShopCardTableViewCell = @"Cell";
     if (self) {
         _tableView = tableView;
         _searchViewViewModel = searchViewViewModel;
-//        [self.tableView registerClass:[VTShopCardTableViewCell class] forCellReuseIdentifier:kShopCardTableViewCell];
+        //        [self.tableView registerClass:[VTShopCardTableViewCell class] forCellReuseIdentifier:kShopCardTableViewCell];
     }
     
     return self;
@@ -65,7 +66,7 @@ NSString *const kShopCardTableViewCell = @"Cell";
     VTShopCardTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kShopCardTableViewCell];
     
     if (cell == nil) {
-        cell = [[VTShopCardTableViewCell alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(tableView.frame), 96) style:VTShopCardTableViewCellStyleDefault resuseIdentifier:kShopCardTableViewCell];
+        cell = [[VTShopCardTableViewCell alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(tableView.frame), 96) style:VTShopCardTableViewCellStyleSelection resuseIdentifier:kShopCardTableViewCell];
     }
     
     [cell setCellIndexPath:indexPath];
@@ -81,4 +82,5 @@ NSString *const kShopCardTableViewCell = @"Cell";
     
     return cell;
 }
+
 @end

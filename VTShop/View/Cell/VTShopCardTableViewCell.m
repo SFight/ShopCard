@@ -14,17 +14,23 @@
 
 #define kFontSize_12_5          12.5        // 12.5号字体
 #define kFontSize_14            14      // 14号字体
+#define kFontSize_15            15      // 15号字体
 
 extern NSString *const kAddName;
+NSString *const kSelectionN = @"vt_shop_N"; // 按钮普通状态
+NSString *const kSelectionH = @"vt_shop_H"; // 按钮选中状态
+NSString *const kSelectionG = @"vt_shop_G"; // 按钮不可选状态
 
 
 @interface VTShopCardTableViewCell()
 
+@property (nonatomic, strong) UIButton *selectionButton; // 选中按钮
 @property (nonatomic, strong) UIImageView *goodsImageView; // 商品图标
 @property (nonatomic, strong) UILabel *goodsTitleLabel; // 商品标题
 @property (nonatomic, strong) UILabel *goodsPriceLabel; // 商品价格
 @property (nonatomic, strong) UIButton *addButton; // 添加商品按钮
 @property (nonatomic, strong) VTShopCountView *shopCountView; // 添加、减少框
+@property (nonatomic, strong) UILabel *goodsInfoLabel; // 商品不足的提示信息
 @property (nonatomic, strong) UIView *lineView; // 底部分割线
 
 @property (nonatomic, strong) VTDataShopCard *dataShopCard;
@@ -37,6 +43,20 @@ extern NSString *const kAddName;
 @implementation VTShopCardTableViewCell
 
 #pragma mark - lazyInit
+- (UIButton *)selectionButton
+{
+    if (!_selectionButton) {
+        _selectionButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_selectionButton setImage:[UIImage imageNamed:kSelectionN inBundle:[NSBundle bundleForClass:[self class]] compatibleWithTraitCollection:nil] forState:UIControlStateNormal];
+        [_selectionButton setImage:[UIImage imageNamed:kSelectionH inBundle:[NSBundle bundleForClass:[self class]] compatibleWithTraitCollection:nil] forState:UIControlStateSelected];
+        [_selectionButton setImage:[UIImage imageNamed:kSelectionG inBundle:[NSBundle bundleForClass:[self class]] compatibleWithTraitCollection:nil] forState:UIControlStateDisabled];
+        
+        [_selectionButton addTarget:self action:@selector(onClickSelectionButton:) forControlEvents:UIControlEventTouchUpInside];
+        
+    }
+    
+    return _selectionButton;
+}
 - (UIImageView *)goodsImageView
 {
     if (!_goodsImageView) {
@@ -79,6 +99,7 @@ extern NSString *const kAddName;
         _addButton.frame = CGRectMake(0, 0, 25, 25);
         [_addButton setImage:[UIImage imageNamed:kAddName inBundle:[NSBundle bundleForClass:[self class]] compatibleWithTraitCollection:nil] forState:UIControlStateNormal];
         [_addButton addTarget:self action:@selector(onClickAddButton:) forControlEvents:UIControlEventTouchUpInside];
+        _addButton.hidden = YES;
     }
     
     return _addButton;
@@ -114,6 +135,19 @@ extern NSString *const kAddName;
     return _shopCountView;
 }
 
+- (UILabel *)goodsInfoLabel
+{
+    if (!_goodsInfoLabel) {
+        _goodsInfoLabel = [[UILabel alloc] init];
+        _goodsInfoLabel.font = [UIFont fontWithSize:kFontSize_15];
+        _goodsInfoLabel.textColor = [UIColor colorForHex:@"#333333"];
+        _goodsInfoLabel.text = @"商品库存不足";
+        _goodsInfoLabel.hidden = YES;
+    }
+    
+    return _goodsInfoLabel;
+}
+
 - (UIView *)lineView
 {
     if (!_lineView) {
@@ -125,50 +159,61 @@ extern NSString *const kAddName;
 }
 
 #pragma mark - inilization
-- (instancetype)initWithFrame:(CGRect)frame resuseIdentifier:(NSString *)reuseIdentifier
+- (instancetype)initWithFrame:(CGRect)frame style:(VTShopCardTableViewCellStyle)style resuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseIdentifier];
     if (self) {
         self.frame = frame;
         
-        [self setupSubviews];
-        [self constraintsSubviews];
+        [self setupSubviews:style];
+        [self constraintsSubviews:style];
     }
     
     return self;
 }
 
-- (void)setupSubviews
+- (void)setupSubviews:(VTShopCardTableViewCellStyle)style
 {
     self.selectionStyle = UITableViewCellSelectionStyleNone;
-    
+    if (style == VTShopCardTableViewCellStyleSelection) {
+        [self.contentView addSubview:self.selectionButton];
+    }
     [self.contentView addSubview:self.goodsImageView];
     [self.contentView addSubview:self.goodsTitleLabel];
     [self.contentView addSubview:self.goodsPriceLabel];
     [self.contentView addSubview:self.addButton];
     [self.contentView addSubview:self.shopCountView];
+    [self.contentView addSubview:self.goodsInfoLabel];
     [self.contentView addSubview:self.lineView];
 }
 
-- (void)constraintsSubviews
+- (void)constraintsSubviews:(VTShopCardTableViewCellStyle)style
 {
     __weak typeof(self) weakSelf = self;
     
+    if (style == VTShopCardTableViewCellStyleSelection) {
+        [self.selectionButton mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.width.height.mas_equalTo(19);
+            make.left.equalTo(weakSelf.contentView.mas_left).with.offset(15);
+            make.centerY.equalTo(weakSelf.contentView.mas_centerY);
+        }];
+    }
+    
     [self.goodsImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(weakSelf.contentView.mas_top).with.offset(22);
-        make.left.equalTo(weakSelf.contentView.mas_left).with.offset(20);
+        make.left.equalTo(weakSelf.contentView.mas_left).with.offset(style == VTShopCardTableViewCellStyleSelection ? 43 : 20);
         make.width.mas_equalTo(56);
         make.height.mas_equalTo(54);
     }];
     
     [self.goodsTitleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(weakSelf.contentView.mas_top).with.offset(15);
-        make.left.equalTo(weakSelf.contentView.mas_left).with.offset(93);
+        make.left.equalTo(weakSelf.contentView.mas_left).with.offset(style == VTShopCardTableViewCellStyleSelection ? 106 : 93);
         make.right.equalTo(weakSelf.contentView.mas_right).with.offset(-15);
     }];
     
     [self.goodsPriceLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(weakSelf.contentView.mas_left).with.offset(93);
+        make.left.equalTo(weakSelf.goodsTitleLabel.mas_left);
         make.bottom.equalTo(weakSelf.contentView.mas_bottom).with.offset(-15);
     }];
     
@@ -181,6 +226,11 @@ extern NSString *const kAddName;
     [self.shopCountView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.height.mas_equalTo(25);
         make.width.mas_equalTo(80);
+        make.right.equalTo(weakSelf.mas_right).with.offset(-15);
+        make.bottom.equalTo(weakSelf.mas_bottom).with.offset(-15);
+    }];
+    
+    [self.goodsInfoLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(weakSelf.mas_right).with.offset(-15);
         make.bottom.equalTo(weakSelf.mas_bottom).with.offset(-15);
     }];
@@ -214,9 +264,24 @@ extern NSString *const kAddName;
 }
 
 #pragma mark - SEL
+- (void)onClickSelectionButton:(UIButton *)button
+{
+    button.selected = !button.selected;
+    self.dataShopCard.state = button.selected ? ShopCardStateSelection : ShopCardStateDefault;
+    
+    if (self.onDataChange) {
+        self.onDataChange(self.dataShopCard, self.indexPath);
+    }
+}
+
 - (void)onClickAddButton:(UIButton *)button
 {
     self.shopCountView.hidden = NO;
+    self.dataShopCard.state = ShopCardStateSelection;
+    self.dataShopCard.buyCount = @1;
+    if (self.onDataChange) {
+        self.onDataChange(self.dataShopCard, self.indexPath);
+    }
 }
 
 #pragma mark - 设置数据源
@@ -229,17 +294,38 @@ extern NSString *const kAddName;
 #pragma mark - 更新数据
 - (void)updateView
 {
+    
     [[NSOperationQueue mainQueue] addOperationWithBlock:^{
         [self.goodsImageView setImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:self.dataShopCard.imagePath]] scale:1.0f]];
     }];
 //    [self.goodsImageView setImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:self.dataShopCard.imagePath]] scale:1.0f]];
     self.goodsTitleLabel.text = self.dataShopCard.title;
     self.goodsPriceLabel.text = self.dataShopCard.priceDiscription;
-    if ([self.dataShopCard.buyCount integerValue] > 0) {
-        self.shopCountView.hidden = NO;
+    if (self.dataShopCard.state == ShopCardStateDisabled) {
+        self.selectionButton.enabled = NO;
+        self.contentView.backgroundColor = [UIColor colorForHex:@"#ededed"];
+        self.goodsInfoLabel.hidden = NO;
         self.addButton.hidden = YES;
-        self.shopCountView.text = [NSString stringWithFormat:@"%@", self.dataShopCard.buyCount];
+        self.shopCountView.hidden = YES;
+        self.goodsInfoLabel.text = self.dataShopCard.discription;
+    } else {
+        self.contentView.backgroundColor = [UIColor whiteColor];
+        self.selectionButton.enabled = YES;
+        self.selectionButton.selected = self.dataShopCard.state;
+        
+        if ([self.dataShopCard.buyCount integerValue] > 0) {
+            self.shopCountView.hidden = NO;
+            self.addButton.hidden = YES;
+            self.goodsInfoLabel.hidden = YES;
+            
+            self.shopCountView.text = [NSString stringWithFormat:@"%@", self.dataShopCard.buyCount];
+        } else {
+            self.addButton.hidden = NO;
+            self.shopCountView.hidden = YES;
+            self.goodsInfoLabel.hidden = YES;
+        }
     }
+    
 }
 
 #pragma mark - 设置cell的位置

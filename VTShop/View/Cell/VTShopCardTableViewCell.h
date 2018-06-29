@@ -11,9 +11,15 @@
 @class VTDataShopCard;
 
 typedef void(^OnDataChange)(VTDataShopCard *dataShopCard, NSIndexPath *indexPath);
+
+typedef NS_ENUM(NSInteger, VTShopCardTableViewCellStyle) {
+    VTShopCardTableViewCellStyleDefault, // 默认没有圈
+    VTShopCardTableViewCellStyleSelection // 有选中圈
+};
+
 @interface VTShopCardTableViewCell : UITableViewCell
 
-- (instancetype)initWithFrame:(CGRect)frame resuseIdentifier:(NSString *)reuseIdentifier;
+- (instancetype)initWithFrame:(CGRect)frame style:(VTShopCardTableViewCellStyle)style resuseIdentifier:(NSString *)reuseIdentifier;
 
 - (void)setCellIndexPath:(NSIndexPath *)indexPath;
 
