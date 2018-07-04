@@ -13,28 +13,21 @@
 		52300A5020E4BAAD00E8F37C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52300A4F20E4BAAD00E8F37C /* Assets.xcassets */; };
 		52300A5320E4BAAD00E8F37C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52300A5120E4BAAD00E8F37C /* LaunchScreen.storyboard */; };
 		52300A5620E4BAAD00E8F37C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 52300A5520E4BAAD00E8F37C /* main.m */; };
-		52300AD920E4F25D00E8F37C /* VTShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52300A6120E4BAE600E8F37C /* VTShop.framework */; };
-		52300ADA20E4F25D00E8F37C /* VTShop.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 52300A6120E4BAE600E8F37C /* VTShop.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5244760720ECC18C001AD86E /* VTShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5244760620ECC17A001AD86E /* VTShop.framework */; };
+		5244760820ECC18C001AD86E /* VTShop.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5244760620ECC17A001AD86E /* VTShop.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		52300A6020E4BAE600E8F37C /* PBXContainerItemProxy */ = {
+		5244760520ECC17A001AD86E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 52300A5C20E4BAE600E8F37C /* VTShop.xcodeproj */;
+			containerPortal = 5244760120ECC17A001AD86E /* VTShop.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 52300A2F20E4BA8E00E8F37C;
 			remoteInfo = VTShop;
 		};
-		52300AD720E4F25500E8F37C /* PBXContainerItemProxy */ = {
+		5244760920ECC18C001AD86E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 52300A5C20E4BAE600E8F37C /* VTShop.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 52300A2E20E4BA8E00E8F37C;
-			remoteInfo = VTShop;
-		};
-		52300ADB20E4F25D00E8F37C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 52300A5C20E4BAE600E8F37C /* VTShop.xcodeproj */;
+			containerPortal = 5244760120ECC17A001AD86E /* VTShop.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 52300A2E20E4BA8E00E8F37C;
 			remoteInfo = VTShop;
@@ -48,7 +41,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				52300ADA20E4F25D00E8F37C /* VTShop.framework in Embed Frameworks */,
+				5244760820ECC18C001AD86E /* VTShop.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -66,7 +59,7 @@
 		52300A5220E4BAAD00E8F37C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52300A5420E4BAAD00E8F37C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52300A5520E4BAAD00E8F37C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		52300A5C20E4BAE600E8F37C /* VTShop.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = VTShop.xcodeproj; path = ../../VTShop/VTShop.xcodeproj; sourceTree = "<group>"; };
+		5244760120ECC17A001AD86E /* VTShop.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = VTShop.xcodeproj; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52300AD920E4F25D00E8F37C /* VTShop.framework in Frameworks */,
+				5244760720ECC18C001AD86E /* VTShop.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,7 +93,7 @@
 		52300A4520E4BAAC00E8F37C /* VTShopTest */ = {
 			isa = PBXGroup;
 			children = (
-				52300A5C20E4BAE600E8F37C /* VTShop.xcodeproj */,
+				5244760120ECC17A001AD86E /* VTShop.xcodeproj */,
 				52300A4620E4BAAC00E8F37C /* AppDelegate.h */,
 				52300A4720E4BAAC00E8F37C /* AppDelegate.m */,
 				52300A4920E4BAAC00E8F37C /* ViewController.h */,
@@ -114,10 +107,10 @@
 			path = VTShopTest;
 			sourceTree = "<group>";
 		};
-		52300A5D20E4BAE600E8F37C /* Products */ = {
+		5244760220ECC17A001AD86E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				52300A6120E4BAE600E8F37C /* VTShop.framework */,
+				5244760620ECC17A001AD86E /* VTShop.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -137,8 +130,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				52300AD820E4F25500E8F37C /* PBXTargetDependency */,
-				52300ADC20E4F25D00E8F37C /* PBXTargetDependency */,
+				5244760A20ECC18C001AD86E /* PBXTargetDependency */,
 			);
 			name = VTShopTest;
 			productName = VTShopTest;
@@ -172,8 +164,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 52300A5D20E4BAE600E8F37C /* Products */;
-					ProjectRef = 52300A5C20E4BAE600E8F37C /* VTShop.xcodeproj */;
+					ProductGroup = 5244760220ECC17A001AD86E /* Products */;
+					ProjectRef = 5244760120ECC17A001AD86E /* VTShop.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -184,11 +176,11 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		52300A6120E4BAE600E8F37C /* VTShop.framework */ = {
+		5244760620ECC17A001AD86E /* VTShop.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = VTShop.framework;
-			remoteRef = 52300A6020E4BAE600E8F37C /* PBXContainerItemProxy */;
+			remoteRef = 5244760520ECC17A001AD86E /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -220,15 +212,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		52300AD820E4F25500E8F37C /* PBXTargetDependency */ = {
+		5244760A20ECC18C001AD86E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = VTShop;
-			targetProxy = 52300AD720E4F25500E8F37C /* PBXContainerItemProxy */;
-		};
-		52300ADC20E4F25D00E8F37C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = VTShop;
-			targetProxy = 52300ADB20E4F25D00E8F37C /* PBXContainerItemProxy */;
+			targetProxy = 5244760920ECC18C001AD86E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
