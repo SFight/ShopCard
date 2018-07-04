@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>state</key>
+		<integer>0</integer>
+		<key>image_path</key>
+		<string>https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1530201062747&amp;di=8b63f120e842319deced21dddc022474&amp;imgtype=0&amp;src=http%3A%2F%2Fimgsrc.baidu.com%2Fimgad%2Fpic%2Fitem%2Fbd3eb13533fa828b4c7414fdf71f4134970a5a5d.jpg</string>
+		<key>title</key>
+		<string>西班牙原瓶进口卡谛娅干红葡萄酒，2支精装版。（6瓶装）</string>
+		<key>price_discription</key>
+		<string>¥18.5</string>
+		<key>price</key>
+		<real>18.5</real>
+		<key>buy_count</key>
+		<integer>0</integer>
+	</dict>
+	<dict>
+		<key>state</key>
+		<integer>1</integer>
+		<key>image_path</key>
+		<string>https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1530201062747&amp;di=8b63f120e842319deced21dddc022474&amp;imgtype=0&amp;src=http%3A%2F%2Fimgsrc.baidu.com%2Fimgad%2Fpic%2Fitem%2Fbd3eb13533fa828b4c7414fdf71f4134970a5a5d.jpg</string>
+		<key>title</key>
+		<string>西班牙原瓶进口卡谛娅干红葡萄酒，2支精装版。（6瓶装）</string>
+		<key>price_discription</key>
+		<string>¥18.5</string>
+		<key>price</key>
+		<real>18.5</real>
+		<key>buy_count</key>
+		<integer>3</integer>
+	</dict>
+	<dict>
+		<key>discription</key>
+		<string>商品库存不足了，无法购买</string>
+		<key>state</key>
+		<integer>2</integer>
+		<key>image_path</key>
+		<string>https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1530201062747&amp;di=8b63f120e842319deced21dddc022474&amp;imgtype=0&amp;src=http%3A%2F%2Fimgsrc.baidu.com%2Fimgad%2Fpic%2Fitem%2Fbd3eb13533fa828b4c7414fdf71f4134970a5a5d.jpg</string>
+		<key>title</key>
+		<string>西班牙原瓶进口卡谛娅干红葡萄酒，2支精装版。（6瓶装）</string>
+		<key>price_discription</key>
+		<string>¥18.5</string>
+		<key>price</key>
+		<real>18.5</real>
+		<key>buy_count</key>
+		<integer>0</integer>
+	</dict>
+</array>
+</plist>
